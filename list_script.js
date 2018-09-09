@@ -27,7 +27,7 @@ console.log(" ");
 console.log("Example 3");
 let citiesList2 = ['Mumbai', 'Delhi', 'Banglore', 'Chennai', 'Jaipur'];
 
-let [cityA1, cityA2, ...remainingCities] = citiesList2;
+let [cityA1, cityA2, ...remainingCities] = citiesList2; // Spread
 
 console.log(cityA1, cityA2, remainingCities);
 
@@ -62,6 +62,20 @@ let {seasonal: [tmp1, fruit1], allseasons: fruit2} = fruits;
 
 console.log("Fruits: ", fruit1, fruit2);
 console.log("Remaining Fruits: ", tmp1);
+
+console.log("--------------------------------");
+console.log(" ");
+
+
+
+let cars = {
+  suv: {
+    hyundai: 'car1', honda: 'car2'
+  }
+};
+let {suv: {hyundai:mySelection, honda, tata="car3"}} = cars;
+
+console.log("Cars: ", mySelection, honda, tata);
 
 console.log("--------------------------------");
 console.log(" ");
