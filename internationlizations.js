@@ -20,12 +20,14 @@ l10nDE.format(1234567.89) === "1.234.567,89"
 
 // Currency Formatting
 // Format numbers with digit grouping, localized separators and attached currency symbol.
-var l10nUSD = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" })
+var l10nUSD = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" })
 var l10nGBP = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP" })
 var l10nEUR = new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" })
 l10nUSD.format(100200300.40) === "$100,200,300.40"
 l10nGBP.format(100200300.40) === "£100,200,300.40"
 l10nEUR.format(100200300.40) === "100.200.300,40 €"
+
+console.log(l10nUSD.format(100200300.40));
 
 
 // Date/Time Formatting
